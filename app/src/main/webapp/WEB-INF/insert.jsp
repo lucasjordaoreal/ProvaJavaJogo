@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="ano">Ano De Lançamento</label>
-                    <input type="text" name="ano" class="form-control"/>
+                    <input type="int" name="ano" class="form-control"/>
                 </div>
                 <div class="form-group">
                     <label for="genero">Gênero</label>
