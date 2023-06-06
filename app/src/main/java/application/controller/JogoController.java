@@ -38,10 +38,10 @@ public class JogoController {
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public String insert(
         @RequestParam("titulo") String titulo,
-        @RequestParam("ano") int anoDeLancamento) {
+        @RequestParam("ano") int ano) {
         Jogo jogo = new Jogo();
         jogo.setTitulo(titulo);
-        jogo.setAnoDeLancamento(anoDeLancamento);
+        jogo.setAno(ano);
 
         jogoRepo.save(jogo);
 
@@ -64,7 +64,7 @@ public class JogoController {
     public String update(
         @RequestParam("titulo") String titulo,
         @RequestParam("id") int id,
-        @RequestParam("ano") int anoDeLancamento
+        @RequestParam("ano") int ano
     ) {
         Optional<Jogo> jogo = jogoRepo.findById(id);
         if(!jogo.isPresent()) {
@@ -72,7 +72,7 @@ public class JogoController {
         }
 
         jogo.get().setTitulo(titulo);
-        jogo.get().setAnoDeLancamento(anoDeLancamento);
+        jogo.get().setAno(ano);
 
         jogoRepo.save(jogo.get());
         return "redirect:/jogo/list";

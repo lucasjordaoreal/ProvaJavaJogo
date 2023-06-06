@@ -15,16 +15,16 @@ public class Jogo {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private String titulo;
-    private int anoDeLancamento;
+    private int ano;
     @ManyToOne
     @JoinColumn(name = "id_genero")
     private Genero genero;
 
-    public int getAnoDeLancamento() {
-        return anoDeLancamento;
+    public int getAno() {
+        return ano;
     }
-    public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
     public int getId() {
         return id;
