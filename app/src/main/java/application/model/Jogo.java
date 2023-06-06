@@ -9,18 +9,23 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="livros")
-public class Livro {
+@Table(name="jogos")
+public class Jogo {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private String titulo;
-    private String isbn;
-
+    private int anoDeLancamento;
     @ManyToOne
     @JoinColumn(name = "id_genero")
     private Genero genero;
 
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
     public int getId() {
         return id;
     }
@@ -33,12 +38,7 @@ public class Livro {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }   
-    public String getIsbn() {
-        return isbn;
-    }
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
+
     public Genero getGenero() {
         return genero;
     }

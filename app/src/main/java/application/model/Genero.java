@@ -18,7 +18,7 @@ public class Genero {
     private String nome;
 
     @OneToMany(mappedBy = "genero")
-    private Set<Livro> livros;
+    private Set<Jogo> jogos;
 
     public int getId() {
         return id;
@@ -32,10 +32,10 @@ public class Genero {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public Set<Livro> getLivros() {
-        return livros;
+    public Set<Jogo> getJogos() {
+        return jogos;
     }
-    public void setLivros(Set<Livro> livros) {
-        this.livros = livros;
+    public void setJogos(Set<Jogo> jogos) {
+        this.jogos = jogos;
     }
 }

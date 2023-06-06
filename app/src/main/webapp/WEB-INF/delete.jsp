@@ -3,16 +3,16 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <title>Excluir Livro</title>
+        <title>Excluir Jogo</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            <h1>Excluir Livro</h1>
-            <a href="/livro/list" class="btn btn-primary">Voltar</a>
-            <p>Deseja remover o livro <strong>"${livro.titulo}"</strong>?</p>
-            <form action="/livro/delete" method="post">
-                <input type="hidden" name="id" value="${livro.id}" />
+            <h1>Excluir Jogo/h1>
+            <a href="/jogo/list" class="btn btn-primary">Voltar</a>
+            <p>Deseja remover o jogo <strong>"${jogo.titulo}"</strong>?</p>
+            <form action="/jogo/delete" method="post">
+                <input type="hidden" name="id" value="${jogo.id}" />
                 <button type="submit" class="btn btn-danger">Excluir</button>
             </form>
         </div>
